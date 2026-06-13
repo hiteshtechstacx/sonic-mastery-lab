@@ -8,7 +8,6 @@ import {
   Scripts,
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
-import { Toaster } from "sonner";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
@@ -82,6 +81,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "description", content: "Deconstruct the hits. Master the craft." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:title", content: "Recreation Union" },
+      { name: "twitter:title", content: "Recreation Union" },
+      { property: "og:description", content: "Deconstruct the hits. Master the craft." },
+      { name: "twitter:description", content: "Deconstruct the hits. Master the craft." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c316813f-22d0-4af3-a371-3f22a35eec94/id-preview-8a6e9466--7fcbb3f7-e429-4ce1-94f9-263cf98d7fa5.lovable.app-1781380765837.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c316813f-22d0-4af3-a371-3f22a35eec94/id-preview-8a6e9466--7fcbb3f7-e429-4ce1-94f9-263cf98d7fa5.lovable.app-1781380765837.png" },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -123,7 +128,6 @@ function RootComponent() {
     <QueryClientProvider client={queryClient}>
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
-      <Toaster theme="dark" position="top-center" richColors closeButton />
     </QueryClientProvider>
   );
 }
