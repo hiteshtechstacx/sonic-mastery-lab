@@ -140,6 +140,16 @@ function BentoCard({
   const my = useMotionValue(50);
   const rotateX = useTransform(my, [0, 100], [4, -4]);
   const rotateY = useTransform(mx, [0, 100], [-4, 4]);
+  const glowBg = useTransform(
+    [mx, my],
+    ([x, y]: number[]) =>
+      `radial-gradient(420px circle at ${x}% ${y}%, oklch(0.7 0.27 300 / 0.18), transparent 50%)`
+  );
+  const borderBg = useTransform(
+    [mx, my],
+    ([x, y]: number[]) =>
+      `radial-gradient(300px circle at ${x}% ${y}%, oklch(0.7 0.27 300 / 0.5), transparent 60%)`
+  );
 
   const onMove = (e: PointerEvent<HTMLDivElement>) => {
     const rect = e.currentTarget.getBoundingClientRect();
@@ -163,26 +173,14 @@ function BentoCard({
         (className ?? "")
       }
     >
-      {/* mouse-follow glow */}
       <motion.div
         className="pointer-events-none absolute -inset-px rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"
-        style={{
-          background: useTransform(
-            [mx, my],
-            ([x, y]) =>
-              `radial-gradient(420px circle at ${x}% ${y}%, oklch(0.7 0.27 300 / 0.18), transparent 50%)`
-          ),
-        }}
+        style={{ background: glowBg }}
       />
-      {/* border gradient on hover */}
       <motion.div
         className="pointer-events-none absolute -inset-px rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"
         style={{
-          background: useTransform(
-            [mx, my],
-            ([x, y]) =>
-              `radial-gradient(300px circle at ${x}% ${y}%, oklch(0.7 0.27 300 / 0.5), transparent 60%)`
-          ),
+          background: borderBg,
           WebkitMask:
             "linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)",
           WebkitMaskComposite: "xor",
@@ -194,3 +192,4 @@ function BentoCard({
     </motion.div>
   );
 }
+
