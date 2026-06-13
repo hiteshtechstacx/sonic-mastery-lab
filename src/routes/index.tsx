@@ -5,6 +5,7 @@ import { Philosophy } from "@/components/site/Philosophy";
 import { Pillars } from "@/components/site/Pillars";
 import { Recreation } from "@/components/site/Recreation";
 import { Faculty } from "@/components/site/Faculty";
+import { Inspiration } from "@/components/site/Inspiration";
 import { FinalCTA } from "@/components/site/FinalCTA";
 import { Footer } from "@/components/site/Footer";
 
@@ -37,6 +38,7 @@ function Index() {
       <Pillars />
       <Recreation />
       <Faculty />
+      <Inspiration />
       <FinalCTA />
       <Footer />
     </main>
