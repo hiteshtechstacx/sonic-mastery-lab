@@ -1,16 +1,20 @@
 import { motion } from "motion/react";
 import { Sparkles } from "lucide-react";
+import sashwatAsset from "@/assets/sashwat.png.asset.json";
+import tanishkAsset from "@/assets/tanishk.jpg.asset.json";
 
 const people = [
   {
     name: "Sashwat Sachdev",
     role: "Producer · Sonic Architect",
     note: "For proving that obsession with craft scales into a movement.",
+    image: sashwatAsset.url,
   },
   {
-    name: "Tanish Bagchi",
+    name: "Tanishk Bagchi",
     role: "Composer · Hit-maker",
     note: "For showing the discipline behind every record that moves a generation.",
+    image: tanishkAsset.url,
   },
 ];
 
@@ -76,12 +80,19 @@ export function Inspiration() {
               />
               <div className="flex items-center gap-4">
                 <div
-                  className="h-14 w-14 rounded-2xl shrink-0 shadow-[0_0_30px_rgba(167,85,247,0.35)]"
+                  className="relative h-16 w-16 rounded-2xl shrink-0 p-[2px] shadow-[0_0_30px_rgba(167,85,247,0.35)]"
                   style={{
                     background:
                       "conic-gradient(from 140deg, var(--neon-violet), var(--neon-blue), var(--neon-green), var(--neon-violet))",
                   }}
-                />
+                >
+                  <img
+                    src={p.image}
+                    alt={p.name}
+                    loading="lazy"
+                    className="h-full w-full rounded-[14px] object-cover object-top"
+                  />
+                </div>
                 <div className="min-w-0">
                   <div className="text-lg font-semibold tracking-tight">{p.name}</div>
                   <div className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground mt-1">
