@@ -1,4 +1,5 @@
 import { Mail, MapPin, Phone, Twitter, Instagram, Youtube, Linkedin, Music2, ArrowUpRight } from "lucide-react";
+import { Logo } from "./Logo";
 
 const columns = [
   {
