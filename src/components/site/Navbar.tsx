@@ -36,15 +36,9 @@ export function Navbar() {
         transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
         className="glass relative flex items-center justify-between rounded-full px-5"
       >
-        <a href="#top" className="flex items-center gap-2">
-          <div className="relative h-7 w-7">
-            <div className="absolute inset-0 rounded-md bg-[var(--gradient-neon)]" />
-            <div className="absolute inset-[3px] rounded-[5px] bg-background grid place-items-center">
-              <div className="h-2 w-2 rounded-full bg-[var(--neon-violet)] shadow-[0_0_8px_var(--neon-violet)]" />
-            </div>
-          </div>
-          <span className="font-semibold tracking-tight">The Recreation Union</span>
-        </a>
+        <Logo />
+
+
 
         <div className="hidden md:flex items-center gap-7 text-sm text-muted-foreground">
           {links.map((l) => (
