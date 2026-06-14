@@ -1,4 +1,5 @@
 import { Mail, MapPin, Phone, Twitter, Instagram, Youtube, Linkedin, Music2, ArrowUpRight } from "lucide-react";
+import { Logo } from "./Logo";
 
 const columns = [
   {
@@ -64,17 +65,8 @@ export function Footer() {
         <div className="grid gap-12 lg:grid-cols-12">
           {/* Brand block */}
           <div className="lg:col-span-4">
-            <div className="flex items-center gap-2.5">
-              <div className="relative h-8 w-8">
-                <div className="absolute inset-0 rounded-md bg-[var(--gradient-neon)]" />
-                <div className="absolute inset-[3px] rounded-[5px] bg-background grid place-items-center">
-                  <div className="h-2 w-2 rounded-full bg-[var(--neon-violet)] shadow-[0_0_8px_var(--neon-violet)]" />
-                </div>
-              </div>
-              <span className="text-lg font-semibold tracking-tight">
-                The Recreation Union
-              </span>
-            </div>
+            <Logo size={40} />
+
 
             <p className="mt-5 text-sm text-muted-foreground leading-relaxed max-w-sm">
               A new-age music school treating production as a rigorous discipline.
