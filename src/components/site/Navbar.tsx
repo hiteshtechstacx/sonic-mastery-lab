@@ -1,11 +1,13 @@
-import { motion, useScroll, useTransform } from "motion/react";
+import { motion, useScroll } from "motion/react";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Logo } from "./Logo";
 
 const links = [
   { label: "Philosophy", href: "#philosophy" },
   { label: "Ecosystem", href: "#ecosystem" },
   { label: "Sandbox", href: "#sandbox" },
+  { label: "Case Studies", href: "#case-studies" },
   { label: "Faculty", href: "#faculty" },
 ];
 
