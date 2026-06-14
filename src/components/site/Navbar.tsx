@@ -41,7 +41,7 @@ export function Navbar() {
               <div className="h-2 w-2 rounded-full bg-[var(--neon-violet)] shadow-[0_0_8px_var(--neon-violet)]" />
             </div>
           </div>
-          <span className="font-semibold tracking-tight">Recreation Union</span>
+          <span className="font-semibold tracking-tight">The Recreation Union</span>
         </a>
 
         <div className="hidden md:flex items-center gap-7 text-sm text-muted-foreground">

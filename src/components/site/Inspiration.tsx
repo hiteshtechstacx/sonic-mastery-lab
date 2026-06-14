@@ -51,7 +51,7 @@ export function Inspiration() {
             transition={{ delay: 0.08 }}
             className="mt-5 text-muted-foreground"
           >
-            Recreation Union exists because of the producers who taught us that taste, technique, and
+            The Recreation Union exists because of the producers who taught us that taste, technique, and
             relentless iteration are the only real shortcuts.
           </motion.p>
         </div>

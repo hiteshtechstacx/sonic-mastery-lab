@@ -12,13 +12,13 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Recreation Union — Deconstruct the Hits. Master the Craft." },
+      { title: "The Recreation Union — Deconstruct the Hits. Master the Craft." },
       {
         name: "description",
         content:
           "A premium ecosystem treating music recreation as a rigorous discipline — elite cohorts, an interactive sandbox, and AI-powered workflows for serious producers.",
       },
-      { property: "og:title", content: "Recreation Union" },
+      { property: "og:title", content: "The Recreation Union" },
       {
         property: "og:description",
         content:
