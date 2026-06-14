@@ -38,6 +38,7 @@ function Index() {
       <Philosophy />
       <Pillars />
       <Recreation />
+      <CaseStudies />
       <Faculty />
       <Inspiration />
       <FinalCTA />
